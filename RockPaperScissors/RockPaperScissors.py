@@ -36,13 +36,18 @@ def decide(userSymbol, oponentSymbol):
                 return Result.win
     raise ValueError
 
-def main():
+def userChoice():
+    chosenValue = input("Choose symbol: rock, paper, scissors: ")
+    chosenSymbol = Symbol[chosenValue]
+    return chosenSymbol
+
+def computerChoice():
     random.seed(datetime.now())
+    return random.sample((Symbol.rock,Symbol.paper,Symbol.scissors),1)[0]
 
-    chosenSymbol = input("Choose symbol: rock, paper, scissors: ")
-    userSymbol = Symbol[chosenSymbol]
-
-    computerSymbol = random.sample((Symbol.rock,Symbol.paper,Symbol.scissors),1)[0]
+def main():
+    userSymbol = userChoice()
+    computerSymbol = computerChoice()
     print("Computer choice: {}".format(computerSymbol.value))
 
     result = decide(userSymbol, computerSymbol)
