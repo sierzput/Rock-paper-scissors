@@ -2,21 +2,6 @@
 <!-- Generated with glade 3.19.0 -->
 <interface>
   <requires lib="gtk+" version="3.12"/>
-  <object class="GtkImage" id="paperImage">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixbuf">images/paper.png</property>
-  </object>
-  <object class="GtkImage" id="rockImage">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixbuf">images/rock.png</property>
-  </object>
-  <object class="GtkImage" id="scissorsImage">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="pixbuf">images/scissors.png</property>
-  </object>
   <object class="GtkDialog" id="dialog1">
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
@@ -180,6 +165,13 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">rockImage</property>
+                <child>
+				  <object class="GtkImage" id="rockImage">
+					<property name="visible">True</property>
+					<property name="can_focus">False</property>
+					<property name="pixbuf">images/rock.png</property>
+				  </object>
+				</child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -193,6 +185,13 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">scissorsImage</property>
+                <child>
+				  <object class="GtkImage" id="scissorsImage">
+					<property name="visible">True</property>
+					<property name="can_focus">False</property>
+					<property name="pixbuf">images/scissors.png</property>
+				  </object>
+				</child>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -206,7 +205,13 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">paperImage</property>
-                <property name="image_position">bottom</property>
+                <child>
+				  <object class="GtkImage" id="paperImage">
+					<property name="visible">True</property>
+					<property name="can_focus">False</property>
+					<property name="pixbuf">images/paper.png</property>
+				  </object>
+				</child>
               </object>
               <packing>
                 <property name="expand">False</property>
