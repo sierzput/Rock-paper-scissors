@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.19.0 -->
 <interface>
   <requires lib="gtk+" version="3.12"/>
+  <!-- interface-local-resource-path images -->
   <object class="GtkDialog" id="dialog1">
     <property name="can_focus">False</property>
     <property name="type_hint">dialog</property>
@@ -95,11 +96,13 @@
             <property name="spacing">2</property>
             <property name="homogeneous">True</property>
             <child>
-              <object class="GtkImage" id="paperImage1">
+              <object class="GtkImage" id="paperImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_right">1</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
                 <property name="pixbuf">images/paper.png</property>
+                <property name="pixel_size">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -108,10 +111,13 @@
               </packing>
             </child>
             <child>
-              <object class="GtkImage" id="rockImage1">
+              <object class="GtkImage" id="rockImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
                 <property name="pixbuf">images/rock.png</property>
+                <property name="pixel_size">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -120,10 +126,13 @@
               </packing>
             </child>
             <child>
-              <object class="GtkImage" id="scissorsImage1">
+              <object class="GtkImage" id="scissorsImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
                 <property name="pixbuf">images/scissors.png</property>
+                <property name="pixel_size">10</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -164,9 +173,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="image">rockImage</property>
+                <property name="image">rockButtonImage</property>
                 <child>
-				  <object class="GtkImage" id="rockImage">
+				  <object class="GtkImage" id="rockButtonImage">
 					<property name="visible">True</property>
 					<property name="can_focus">False</property>
 					<property name="pixbuf">images/rock.png</property>
@@ -184,9 +193,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="image">scissorsImage</property>
+                <property name="image">scissorsButtonImage</property>
                 <child>
-				  <object class="GtkImage" id="scissorsImage">
+				  <object class="GtkImage" id="scissorsButtonImage">
 					<property name="visible">True</property>
 					<property name="can_focus">False</property>
 					<property name="pixbuf">images/scissors.png</property>
@@ -204,9 +213,9 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <property name="image">paperImage</property>
+                <property name="image">paperButtonImage</property>
                 <child>
-				  <object class="GtkImage" id="paperImage">
+				  <object class="GtkImage" id="paperButtonImage">
 					<property name="visible">True</property>
 					<property name="can_focus">False</property>
 					<property name="pixbuf">images/paper.png</property>
