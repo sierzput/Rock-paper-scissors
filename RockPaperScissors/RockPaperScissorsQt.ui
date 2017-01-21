@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Kamień, Papier, Nożyce</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -37,6 +37,9 @@
          <kerning>true</kerning>
         </font>
        </property>
+       <property name="toolTip">
+        <string>Kamień</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -49,6 +52,9 @@
          <width>100</width>
          <height>100</height>
         </size>
+       </property>
+       <property name="shortcut">
+        <string>1</string>
        </property>
       </widget>
      </item>
@@ -69,6 +75,9 @@
          <width>100</width>
          <height>100</height>
         </size>
+       </property>
+       <property name="shortcut">
+        <string>2</string>
        </property>
       </widget>
      </item>
@@ -105,6 +114,9 @@
          <height>100</height>
         </size>
        </property>
+       <property name="shortcut">
+        <string>3</string>
+       </property>
        <property name="autoDefault">
         <bool>false</bool>
        </property>
@@ -118,11 +130,16 @@
    <widget class="QLabel" name="yourScoreLabel">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>50</y>
+      <x>390</x>
+      <y>170</y>
       <width>91</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Twój wynik: </string>
@@ -131,14 +148,19 @@
    <widget class="QLabel" name="computerScoreLabel">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>90</y>
-      <width>91</width>
+      <x>390</x>
+      <y>20</y>
+      <width>141</width>
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>Wynik komputera:</string>
+     <string>Komputer:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -175,6 +197,9 @@
          <height>100</height>
         </size>
        </property>
+       <property name="toolTip">
+        <string>Kamień</string>
+       </property>
        <property name="inputMethodHints">
         <set>Qt::ImhNone</set>
        </property>
@@ -197,6 +222,9 @@
          <height>100</height>
         </size>
        </property>
+       <property name="toolTip">
+        <string>Papier</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -216,6 +244,9 @@
          <height>100</height>
         </size>
        </property>
+       <property name="toolTip">
+        <string>Nożyce</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -228,6 +259,59 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="yourScore">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>170</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Przeciwnik:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="computerScore">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>20</y>
+      <width>47</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -243,14 +327,26 @@
     <property name="title">
      <string>Gra</string>
     </property>
-    <addaction name="actionNowa_gra"/>
+    <addaction name="actionNewGame"/>
+    <addaction name="actionExit"/>
    </widget>
    <addaction name="menuGra"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionNowa_gra">
+  <action name="actionNewGame">
    <property name="text">
     <string>Nowa gra</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Zakończ</string>
+   </property>
+   <property name="shortcut">
+    <string>K</string>
    </property>
   </action>
  </widget>
