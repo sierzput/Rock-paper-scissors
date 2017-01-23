@@ -31,10 +31,25 @@ class MainWindow:
         self.window.show()
         self.__hideImages__()
 
-    def onExitMenuItem(self, *args):
+    def onHelpMenuItemPressed(self, *args):
+        message = """Gra składa się z kolejnych tur. W każdej turze gracze i komputer, wybierają symbol papieru, kamienia lub nożyc. Gracz, który wybrał silniejszy symbol, otrzymuje jeden punkt. W przypadku pokazania dwóch takich samych symboli następuje remis – punktu brak. Oto hierarchia symboli:
+
+ –       nożyce są silniejsze od papieru, ponieważ go tną,
+ –       kamień jest silniejszy od nożyc, ponieważ je tępi,
+ –       papier jest silniejszy od kamienia, ponieważ go owija.
+
+Gracz, który pierwszy uzyska umówioną wcześniej ilość punktów, wygrywa partię."""
+
+        dialog = Gtk.MessageDialog(self.window, Gtk.DialogFlags.MODAL, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, message, title="Zasady gry")
+        dialog.run()
+        dialog.destroy()
+
+    def onExitMenuItemPressed(self, *args):
         Gtk.main_quit(*args)
 
-    def onNewGamePressed(self, button):
+    def onNewGamePressed(self, *args):
+        self.yourScore.set_text('0')
+        self.computerScore.set_text('0')
         self.__hideImages__()
 
     def onRockButtonClicked(self, button):

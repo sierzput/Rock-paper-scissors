@@ -3,6 +3,31 @@
 <interface>
   <requires lib="gtk+" version="3.12"/>
   <!-- interface-local-resource-path images -->
+  <object class="GtkImage" id="aboutImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-about</property>
+  </object>
+  <object class="GtkImage" id="newImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-new</property>
+  </object>
+  <object class="GtkImage" id="paperButtonImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">images/paper.png</property>
+  </object>
+  <object class="GtkImage" id="rockButtonImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">images/rock.png</property>
+  </object>
+  <object class="GtkImage" id="scissorsButtonImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">images/scissors.png</property>
+  </object>
   <object class="GtkApplicationWindow" id="applicationwindow1">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Kamień, papier, nożyce</property>
@@ -19,7 +44,7 @@
               <object class="GtkMenuItem" id="menuitem1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Plik</property>
+                <property name="label" translatable="yes">Gra</property>
                 <property name="use_underline">True</property>
                 <child type="submenu">
                   <object class="GtkMenu" id="menu1">
@@ -27,11 +52,12 @@
                     <property name="can_focus">False</property>
                     <child>
                       <object class="GtkImageMenuItem" id="newGameMenuItem">
-                        <property name="label">gtk-new</property>
+                        <property name="label">Nowa</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
+                        <property name="image">newImage</property>
+                        <property name="use_stock">False</property>
+                        <property name="always_show_image">True</property>
                         <signal name="activate" handler="onNewGamePressed" swapped="no"/>
                       </object>
                     </child>
@@ -48,7 +74,32 @@
                         <property name="can_focus">False</property>
                         <property name="use_underline">True</property>
                         <property name="use_stock">True</property>
-                        <signal name="activate" handler="onExitMenuItem" swapped="no"/>
+                        <property name="always_show_image">True</property>
+                        <signal name="activate" handler="onExitMenuItemPressed" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="menuitem2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Pomoc</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="helpMenuItem">
+                        <property name="label">Zasady gry</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">aboutImage</property>
+                        <property name="use_stock">False</property>
+                        <property name="always_show_image">True</property>
+                        <signal name="activate" handler="onHelpMenuItemPressed" swapped="no"/>
                       </object>
                     </child>
                   </object>
@@ -160,13 +211,6 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">rockButtonImage</property>
-                <child>
-				  <object class="GtkImage" id="rockButtonImage">
-					<property name="visible">True</property>
-					<property name="can_focus">False</property>
-					<property name="pixbuf">images/rock.png</property>
-				  </object>
-				</child>
                 <signal name="clicked" handler="onRockButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -181,13 +225,6 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">scissorsButtonImage</property>
-                <child>
-				  <object class="GtkImage" id="scissorsButtonImage">
-					<property name="visible">True</property>
-					<property name="can_focus">False</property>
-					<property name="pixbuf">images/scissors.png</property>
-				  </object>
-				</child>
                 <signal name="clicked" handler="onScissorsButtonClicked" swapped="no"/>
               </object>
               <packing>
@@ -202,13 +239,6 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">paperButtonImage</property>
-                <child>
-				  <object class="GtkImage" id="paperButtonImage">
-					<property name="visible">True</property>
-					<property name="can_focus">False</property>
-					<property name="pixbuf">images/paper.png</property>
-				  </object>
-				</child>
                 <signal name="clicked" handler="onPaperButtonClicked" swapped="no"/>
               </object>
               <packing>
