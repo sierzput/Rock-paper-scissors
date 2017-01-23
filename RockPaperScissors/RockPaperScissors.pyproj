@@ -32,6 +32,16 @@
     </Compile>
     <Compile Include="RockPaperScissorsQtUi.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\paper.png" />
+    <Content Include="images\rock.png" />
+    <Content Include="images\scissors.png" />
+    <Content Include="RockPaperScissorsGtk.glade" />
+    <Content Include="RockPaperScissorsQt.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
