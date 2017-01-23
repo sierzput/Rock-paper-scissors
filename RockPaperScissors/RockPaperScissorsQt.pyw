@@ -1,13 +1,12 @@
 ﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from RockPaperScissorsQtUi import Ui_MainWindow
 import sys
 from PyQt4 import QtGui
-from RockPaperScissors import Symbol, decide, computerChoice, Result
 from PyQt4.QtCore import Qt
 from PyQt4.Qt import QMessageBox
-import time
+from RockPaperScissors import Symbol, Result, decide, computerChoice
+from RockPaperScissorsQtUi import Ui_MainWindow
 
 def enableButtons(ui):
     ui.rockButton.setEnabled(True)
