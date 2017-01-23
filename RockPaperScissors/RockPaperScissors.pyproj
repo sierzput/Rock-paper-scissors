@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>772cc9df-3b9d-47ec-bbeb-71d9b71e854a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RockPaperScissorsQt.pyw</StartupFile>
+    <StartupFile>RockPaperScissorsGtk.pyw</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
