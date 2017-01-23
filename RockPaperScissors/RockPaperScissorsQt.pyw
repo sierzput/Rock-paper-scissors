@@ -29,6 +29,21 @@ def showDialog(result):
     dialog.setWindowTitle(' ')
     dialog.exec_()
 
+def showHelp():
+    message = """Gra składa się z kolejnych tur. W każdej turze gracze i komputer, wybierają symbol papieru, kamienia lub nożyc. Gracz, który wybrał silniejszy symbol, otrzymuje jeden punkt. W przypadku pokazania dwóch takich samych symboli następuje remis – punktu brak. Oto hierarchia symboli:
+
+–       nożyce są silniejsze od papieru, ponieważ go tną,
+–       kamień jest silniejszy od nożyc, ponieważ je tępi,
+–       papier jest silniejszy od kamienia, ponieważ go owija.
+
+Gracz, który pierwszy uzyska umówioną wcześniej ilość punktów, wygrywa partię."""
+
+    dialog = QMessageBox()
+    dialog.setText(message)
+    dialog.setIcon(QMessageBox.Information)
+    dialog.setWindowTitle('Zasady gry')
+    dialog.exec_()
+
 def choose(ui, symbol):
     hideImages(ui)
     if symbol == Symbol.rock:
@@ -88,6 +103,7 @@ def main():
 
     ui.actionNewGame.triggered.connect(lambda: newGame(ui))
     ui.actionExit.triggered.connect(QtGui.qApp.quit)
+    ui.actionHelp.triggered.connect(showHelp)
 
     sys.exit(app.exec_())
 

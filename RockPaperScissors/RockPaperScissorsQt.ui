@@ -330,12 +330,19 @@
     <addaction name="actionNewGame"/>
     <addaction name="actionExit"/>
    </widget>
+   <widget class="QMenu" name="menuPomoc">
+    <property name="title">
+     <string>Pomoc</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
    <addaction name="menuGra"/>
+   <addaction name="menuPomoc"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionNewGame">
    <property name="text">
-    <string>Nowa gra</string>
+    <string>Nowa</string>
    </property>
    <property name="shortcut">
     <string>N</string>
@@ -346,7 +353,15 @@
     <string>Zakończ</string>
    </property>
    <property name="shortcut">
-    <string>K</string>
+    <string>Q</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Zasady gry</string>
+   </property>
+   <property name="shortcut">
+    <string>H</string>
    </property>
   </action>
  </widget>
