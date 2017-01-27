@@ -25,7 +25,9 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(585, 429)
+        MainWindow.resize(570, 420)
+        MainWindow.setMinimumSize(QtCore.QSize(560, 420))
+        MainWindow.setMaximumSize(QtCore.QSize(800, 600))
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.horizontalLayoutWidget = QtGui.QWidget(self.centralwidget)
@@ -134,7 +136,7 @@ class Ui_MainWindow(object):
         self.computerScore.setObjectName(_fromUtf8("computerScore"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 585, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 570, 21))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuGra = QtGui.QMenu(self.menubar)
         self.menuGra.setObjectName(_fromUtf8("menuGra"))
